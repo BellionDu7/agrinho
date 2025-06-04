@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2025 - Celebrando a Conexão Campo e Cidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2e7d32 0%, #388e3c 50%, #43a047 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 30px;
+            height: calc(100% - 30px);
+            width: 2px;
+            background: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-10 w-auto" src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" alt="Agrinho Logo">
+                        <span class="ml-2 text-xl font-bold text-green-700">Agrinho 2025</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#inicio" class="text-green-700 hover:text-green-500 px-3 py-2 font-medium">Início</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-green-500 px-3 py-2 font-medium">Sobre</a>
+                    <a href="#temas" class="text-gray-700 hover:text-green-500 px-3 py-2 font-medium">Temas</a>
+                    <a href="#inscricao" class="text-gray-700 hover:text-green-500 px-3 py-2 font-medium">Inscrição</a>
+                    <a href="#galeria" class="text-gray-700 hover:text-green-500 px-3 py-2 font-medium">Galeria</a>
+                    <a href="#contato" class="text-gray-700 hover:text-green-500 px-3 py-2 font-medium">Contato</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-green-500 focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-green-700">Início</a>
+                <a href="#sobre" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-green-500">Sobre</a>
+                <a href="#temas" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-green-500">Temas</a>
+                <a href="#inscricao" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-green-500">Inscrição</a>
+                <a href="#galeria" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-green-500">Galeria</a>
+                <a href="#contato" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-green-500">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Agrinho 2025</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Celebrando a Conexão Campo e Cidade</h2>
+                    <p class="text-lg mb-8">Um concurso que une estudantes, educadores e comunidades para explorar as relações entre o rural e o urbano, promovendo sustentabilidade e desenvolvimento integrado.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#inscricao" class="bg-white text-green-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg text-center transition duration-300">Inscreva-se</a>
+                        <a href="#sobre" class="border-2 border-white text-white hover:bg-white hover:text-green-700 font-bold py-3 px-6 rounded-lg text-center transition duration-300">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="campocidade.jpg" 
+                         alt="Campo e cidade" 
+                         class="rounded-xl shadow-2xl w-full max-w-md animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Sobre o Agrinho 2025</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    O programa Agrinho é uma iniciativa que promove a reflexão sobre temas relevantes para a sociedade, conectando estudantes do campo e da cidade em um diálogo sobre sustentabilidade, tecnologia e qualidade de vida.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 card-hover">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-leaf text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Missão</h3>
+                    <p class="text-gray-600">
+                        Promover a integração entre campo e cidade através da educação, mostrando como essas realidades se complementam para um desenvolvimento sustentável.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 card-hover">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Público</h3>
+                    <p class="text-gray-600">
+                        Estudantes e educadores de escolas públicas e particulares, do ensino fundamental ao médio, tanto da zona rural quanto urbana.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 card-hover">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-trophy text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Premiação</h3>
+                    <p class="text-gray-600">
+                        Prêmios em dinheiro, equipamentos para escolas, viagens educativas e a oportunidade de apresentar projetos em eventos nacionais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Section -->
+    <section id="temas" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Tema 2025: Conexão Campo e Cidade</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Explore como o campo e a cidade se relacionam, se complementam e como podemos construir pontes para um futuro mais sustentável e integrado.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Cidade moderna" 
+                         class="rounded-xl shadow-lg w-full mb-6">
+                    <img src="https://images.unsplash.com/photo-1500382018108-8b453cc25d01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Campo agrícola" 
+                         class="rounded-xl shadow-lg w-full">
+                </div>
+                
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Subtema 1: Alimentação e Abastecimento</h3>
+                        <p class="text-gray-600">
+                            Como os alimentos produzidos no campo chegam às cidades? Explore cadeias produtivas, logística, feiras livres e mercados municipais.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Subtema 2: Tecnologia e Inovação</h3>
+                        <p class="text-gray-600">
+                            Agricultura 4.0, smart cities e como a tecnologia está aproximando campo e cidade através de soluções inovadoras.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Subtema 3: Sustentabilidade Ambiental</h3>
+                        <p class="text-gray-600">
+                            Preservação de recursos hídricos, manejo de resíduos e como as práticas sustentáveis no campo beneficiam a vida urbana.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Subtema 4: Cultura e Identidade</h3>
+                        <p class="text-gray-600">
+                            Tradições rurais na cidade, festivais culturais, música, dança e gastronomia como elementos de conexão entre essas realidades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Cronograma do Concurso</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Confira as principais datas do Agrinho 2025 e não perca os prazos importantes.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline Item 1 -->
+                    <div class="relative timeline-item pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">1</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Inscrições</h3>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2"></i> 01/03/2025 a 30/04/2025</p>
+                        <p class="text-gray-600">
+                            Período para escolas e estudantes se inscreverem no concurso através do site oficial.
+                        </p>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="relative timeline-item pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">2</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Desenvolvimento dos Projetos</h3>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2"></i> 01/05/2025 a 31/07/2025</p>
+                        <p class="text-gray-600">
+                            Período para desenvolvimento dos trabalhos com orientação dos professores.
+                        </p>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="relative timeline-item pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">3</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Submissão dos Trabalhos</h3>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2"></i> 01/08/2025 a 31/08/2025</p>
+                        <p class="text-gray-600">
+                            Envio dos trabalhos completos através da plataforma digital do concurso.
+                        </p>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="relative timeline-item pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">4</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Avaliação</h3>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2"></i> 01/09/2025 a 30/09/2025</p>
+                        <p class="text-gray-600">
+                            Análise dos trabalhos pela comissão julgadora composta por especialistas.
+                        </p>
+                    </div>
+                    
+                    <!-- Timeline Item 5 -->
+                    <div class="relative timeline-item pl-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">5</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Premiação</h3>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2"></i> 15/10/2025</p>
+                        <p class="text-gray-600">
+                            Cerimônia de premiação dos melhores trabalhos em cada categoria.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="inscricao" class="py-20 bg-green-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">Inscrições Abertas!</h2>
+                    <p class="text-lg mb-8">
+                        Participe do Agrinho 2025 e mostre sua visão sobre a conexão entre campo e cidade. Escolas e estudantes podem se inscrever gratuitamente.
+                    </p>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg mb-8">
+                        <h3 class="text-xl font-bold mb-3">Categorias de Participação</h3>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check-circle mr-2"></i> Desenho (1º ao 3º ano)</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Redação (4º ao 9º ano)</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Projeto Científico (Ensino Médio)</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Experiência Pedagógica (Professores)</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Escola Agrinho (Instituições)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-2xl p-8 text-gray-800">
+                        <h3 class="text-2xl font-bold mb-6 text-center text-green-700">Formulário de Pré-Inscrição</h3>
+                        <form id="registration-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="school" class="block text-gray-700 font-medium mb-2">Escola</label>
+                                <input type="text" id="school" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="grade" class="block text-gray-700 font-medium mb-2">Série/Ano</label>
+                                <select id="grade" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                                    <option value="">Selecione</option>
+                                    <option value="1">1º ano</option>
+                                    <option value="2">2º ano</option>
+                                    <option value="3">3º ano</option>
+                                    <option value="4">4º ano</option>
+                                    <option value="5">5º ano</option>
+                                    <option value="6">6º ano</option>
+                                    <option value="7">7º ano</option>
+                                    <option value="8">8º ano</option>
+                                    <option value="9">9º ano</option>
+                                    <option value="10">1º ano EM</option>
+                                    <option value="11">2º ano EM</option>
+                                    <option value="12">3º ano EM</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="category" class="block text-gray-700 font-medium mb-2">Categoria</label>
+                                <select id="category" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                                    <option value="">Selecione</option>
+                                    <option value="drawing">Desenho</option>
+                                    <option value="essay">Redação</option>
+                                    <option value="project">Projeto Científico</option>
+                                    <option value="pedagogy">Experiência Pedagógica</option>
+                                    <option value="school">Escola Agrinho</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Enviar Pré-Inscrição
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Galeria de Imagens</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Veja momentos especiais de edições anteriores e imagens que inspiram o tema deste ano.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="agri.png" 
+                         alt="Agricultura familiar" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                    <div class="px-4 py-3 bg-white">
+                        <p class="text-sm text-gray-600">Agricultura familiar abastecendo a cidade</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="trigo.jpg" 
+                         alt="Campo de trigo" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                    <div class="px-4 py-3 bg-white">
+                        <p class="text-sm text-gray-600">Produção agrícola em larga escala</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Feira urbana" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                    <div class="px-4 py-3 bg-white">
+                        <p class="text-sm text-gray-600">Feiras urbanas conectando produtores e consumidores</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="tecnologiaa.png" 
+                         alt="Tecnologia agrícola" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                    <div class="px-4 py-3 bg-white">
+                        <p class="text-sm text-gray-600">Tecnologia aproximando campo e cidade</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" 
+                         alt="Crianças no campo" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                    <div class="px-4 py-3 bg-white">
+                        <p class="text-sm text-gray-600">Educação rural e urbana se encontrando</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                    <img src="premiaçao.jpeg" 
+                         alt="Premiação Agrinho" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                    <div class="px-4 py-3 bg-white">
+                        <p class="text-sm text-gray-600">Premiação de edições anteriores</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Ver Mais Fotos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Depoimentos</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Veja o que participantes de edições anteriores têm a dizer sobre a experiência no Agrinho.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Participar do Agrinho mudou minha visão sobre a agricultura. Descobri como tudo que comemos vem do trabalho de pessoas no campo e como isso é importante para todos nós."
+                    </p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ana Silva">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ana Silva</h4>
+                            <p class="text-sm text-gray-600">Estudante - 8º ano</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Como professora da cidade, o Agrinho me proporcionou conhecer realidades diferentes e criar projetos que aproximam meus alunos da produção de alimentos. Uma experiência transformadora!"
+                    </p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Márcia Oliveira">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Márcia Oliveira</h4>
+                            <p class="text-sm text-gray-600">Professora</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Nosso projeto sobre agricultura urbana ganhou prêmio no Agrinho e hoje temos uma horta comunitária na escola que abastece parte da merenda. O concurso é uma oportunidade real de mudança."
+                    </p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/22.jpg" alt="Carlos Mendes">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos Mendes</h4>
+                            <p class="text-sm text-gray-600">Diretor Escolar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Realização e Apoio</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" alt="Agrinho" class="h-16 opacity-80 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://pngupload.wikimedia.org/wikipedia/commons/thumb/8/84/Senar_Brasil.svg/1200px-Senar_Brasil.svg." alt="SENAR" class="h-16 opacity-80 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Logo_do_Minist%C3%A9rio_da_Agricultura%2C_Pecu%C3%A1ria_e_Abastecimento_%28Mapa%29.svg/1200px-Logo_do_Minist%C3%A9rio_da_Agricultura%2C_Pecu%C3%A1ria_e_Abastecimento_%28Mapa%29.svg.png" alt="Ministério da Agricultura" class="h-16 opacity-80 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Logo_do_Minist%C3%A9rio_da_Educa%C3%A7%C3%A3o_%28MEC%29.svg/1200px-Logo_do_Minist%C3%A9rio_da_Educa%C3%A7%C3%A3o_%28MEC%29.svg.png" alt="Ministério da Educação" class="h-16 opacity-80 hover:opacity-100 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Tem dúvidas sobre o concurso? Entre em contato com nossa equipe através dos canais abaixo.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Informações de Contato</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-green-600 mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Endereço</h4>
+                                    <p class="text-gray-600">Av. das Nações, 1234 - Centro, Curitiba/PR</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-green-600 mt-1 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Telefone</h4>
+                                    <p class="text-gray-600">(41) 3333-4444</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-green-600 mt-1 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">E-mail</h4>
+                                    <p class="text-gray-600">contato@agrinho2025.org.br</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-green-600 mt-1 mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Horário de Atendimento</h4>
+                                    <p class="text-gray-600">Segunda a sexta, das 8h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Redes Sociais</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center hover:bg-green-700 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center hover:bg-green-700 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center hover:bg-green-700 transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center hover:bg-green-700 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-50 rounded-xl shadow-md p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Envie uma Mensagem</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-gray-700 font-medium mb-2">Nome</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                                <input type="text" id="contact-subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                                <textarea id="contact-message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Perguntas Frequentes</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Tire suas dúvidas sobre o concurso Agrinho 2025 com as perguntas mais comuns abaixo.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <h3 class="font-bold text-gray-800">Quem pode participar do Agrinho 2025?</h3>
+                            <i class="fas fa-chevron-down text-green-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Podem participar estudantes regularmente matriculados em escolas públicas ou particulares, do 1º ano do Ensino Fundamental ao 3º ano do Ensino Médio, além de professores e escolas como um todo. Há categorias específicas para cada nível de ensino.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <h3 class="font-bold text-gray-800">Como faço para me inscrever?</h3>
+                            <i class="fas fa-chevron-down text-green-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                As inscrições são feitas exclusivamente online através do site oficial do Agrinho. Professores ou responsáveis pela escola devem preencher o formulário de inscrição durante o período determinado no cronograma. Estudantes devem ser inscritos por seus professores ou pela coordenação da escola.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <h3 class="font-bold text-gray-800">Quais são os critérios de avaliação?</h3>
+                            <i class="fas fa-chevron-down text-green-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Os trabalhos são avaliados por uma comissão julgadora multidisciplinar considerando: adequação ao tema, criatividade e originalidade, qualidade técnica, impacto social e potencial de aplicação. Cada categoria tem critérios específicos detalhados no regulamento.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <h3 class="font-bold text-gray-800">Posso participar individualmente ou precisa ser em grupo?</h3>
+                            <i class="fas fa-chevron-down text-green-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Depende da categoria. Para desenho e redação, a participação é individual. Já para projetos científicos, pode ser individual ou em grupos de até 3 estudantes. A categoria Escola Agrinho envolve toda a comunidade escolar.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <button class="faq-question w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <h3 class="font-bold text-gray-800">Onde encontro o regulamento completo?</h3>
+                            <i class="fas fa-chevron-down text-green-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                O regulamento completo estará disponível para download na seção de inscrições do site a partir do dia 01/02/2025. Você também pode solicitar uma cópia por e-mail através do nosso formulário de contato.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">Receba Novidades do Agrinho</h2>
+                    <p>Cadastre-se para receber informações sobre prazos, materiais de apoio e resultados.</p>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="flex flex-col sm:flex-row gap-2">
+                        <input type="email" placeholder="Seu melhor e-mail" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-green-800 hover:bg-green-900 font-bold px-6 py-3 rounded-lg transition duration-300 whitespace-nowrap">
+                            Assinar Newsletter
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Agrinho 2025</h3>
+                    <p class="text-gray-400">
+                        Um programa educacional que promove a reflexão sobre temas relevantes para a sociedade, conectando campo e cidade.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition duration-300">Sobre</a></li>
+                        <li><a href="#temas" class="text-gray-400 hover:text-white transition duration-300">Temas</a></li>
+                        <li><a href="#inscricao" class="text-gray-400 hover:text-white transition duration-300">Inscrição</a></li>
+                        <li><a href="#galeria" class="text-gray-400 hover:text-white transition duration-300">Galeria</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-green-500"></i>
+                            <span>Av. das Nações, 1234 - Curitiba/PR</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-green-500"></i>
+                            <span>(41) 3333-4444</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-green-500"></i>
+                            <span>contato@agrinho2025.org.br</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 Agrinho. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-green-600 text-white shadow-lg hidden z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form submission (example)
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Pré-inscrição enviada com sucesso! Em breve entraremos em contato com mais informações.');
+            this.reset();
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Nossa equipe entrará em contato em breve.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
